@@ -1,14 +1,30 @@
+/**
+ * @file simpsons-rule.c
+ * @brief A program that calculates the approximation of an integral using Simpson's rule
+ * integral using Simpson's Rule
+ * @author Mateus Almeida
+ * @version 1.0
+ */
+
 #include <stdio.h>
 #include <math.h>
 
-// Defined function to calculate the integral: f(x) <- x^2
+/**
+ * Defined function to calculate the integral: f(x) <- x^2
+ * @param x: value for calculating the function
+ */
 double function (double x) {
   return pow(x, 2);
 }
 
 
-// This function calculates the approximation of an 
-// integral using Simpson's Rule
+/**
+ * This function calculates the approximation of an 
+ * integral using Simpson's Rule
+ * @param a: integration limit A
+ * @param b: integration limit B
+ * @param n: number of subintervals
+ */
 double simpsonsRule (double a, double b, unsigned int n) {
   double x0[n], y0[n], I = 0;
 
@@ -37,9 +53,9 @@ double simpsonsRule (double a, double b, unsigned int n) {
 
 
 int main () {
-  // Integration limits
+  //! Integration limits
   double a = 5, b = 3;
-  // Subinterval
+  //! Subinterval
   unsigned int n = 2;
 
   double I = simpsonsRule(a, b, n);
