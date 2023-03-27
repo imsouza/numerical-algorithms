@@ -1,6 +1,6 @@
 # Numerical Algorithms
 
-This repository contains numerical integration algorithms made in C 
+Numerical algorithms in C
 
 ## Usage
 
